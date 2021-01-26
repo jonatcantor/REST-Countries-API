@@ -17,6 +17,19 @@ html {
   box-shadow: 0 0 1rem 0.1rem #b6b5b5;
 }
 
+.top-panel {
+  padding: 2rem 3rem;
+}
+
+.back-button {
+  text-decoration: none;
+  color: black;
+  border-radius: 0.8rem;
+  border: solid thin black;
+  padding: 0.5rem 2rem;
+  display: inline-block;
+}
+
 .main-grid {
   width: 100%;
   padding: 1rem 3rem;

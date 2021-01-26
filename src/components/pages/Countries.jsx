@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CountryCard from "../molecules/CountryCard";
+import TopPanel from "../organisms/TopPanel";
 
 function Countries() {
   const [countries, setCountries] = useState([]);
@@ -15,18 +16,22 @@ function Countries() {
   }, []);
 
   return (
-    <main className="main-grid">
-      { countries.map((country) =>
-        <CountryCard
-          key={country.alpha3Code}
-          flag={country.flag}
-          name={country.name}
-          population={country.population}
-          region={country.region}
-          capital={country.capital}
-        />
-      )}
-    </main>
+    <>
+      <TopPanel isSearch />
+
+      <main className="main-grid">
+        { countries.map((country) =>
+          <CountryCard
+            key={country.alpha3Code}
+            flag={country.flag}
+            name={country.name}
+            population={country.population}
+            region={country.region}
+            capital={country.capital}
+          />
+        )}
+      </main>
+    </>
   );
 }
 
