@@ -11,7 +11,12 @@ function Country() {
     async function fetchCountryData() {
       const response = await fetch("https://restcountries.eu/rest/v2/name/" + name);
       const data = await response.json();
-  
+
+      if(data[0].borders.length > 0) {
+        const bordersResponse = await fetch("https://restcountries.eu/rest/v2/alpha?codes=" + data[0].borders.join(";") + "&fields=name");
+        data[0].borders = await bordersResponse.json();
+      }
+
       setCountryDetails(data[0]);
     }
 

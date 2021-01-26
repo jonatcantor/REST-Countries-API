@@ -38,7 +38,8 @@ function CountryDetails({
         <p className="country-details__text country-details__borders">
           <span className="country-details__bold">Border Countries:</span>
           {
-            borderCountries.map((border, index) => <Border  key={index} border={border} />)
+            borderCountries.length > 0 &&
+            borderCountries.map((border, index) => <Border  key={index} border={border.name} />)
           }
         </p>
       </div>

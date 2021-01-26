@@ -133,11 +133,11 @@ html {
 
 .border {
   border-radius: 0.5rem;
-  box-shadow: 0 0 1rem 0.1rem #b6b5b5;
+  box-shadow: 0 0 0.5rem 0.1rem #c7c7c7;
   text-decoration: none;
   color: black;
   padding: 0.5rem 1rem;
-  margin: 0 1rem 0rem 1rem;
+  margin: 0.5rem;
 }
 
 .search-zone {
