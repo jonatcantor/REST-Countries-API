@@ -1,6 +1,9 @@
 function Header() {
   return (
-    <header>Header app</header>
+    <header className="header">
+      <p>Where in the world?</p>
+      <button>Dark Mode</button>
+    </header>
   );
 }
 

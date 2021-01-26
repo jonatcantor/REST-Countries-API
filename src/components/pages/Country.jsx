@@ -18,7 +18,7 @@ function Country() {
   }, [name]);
 
   return (
-    <main>
+    <main className="main-grid">
       {
         countryDetails
         ?
