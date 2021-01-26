@@ -5,6 +5,12 @@ import TopPanel from "../organisms/TopPanel";
 function Countries() {
   const [countries, setCountries] = useState([]);
 
+  async function handleSearch(name) {
+    const response = await fetch("https://restcountries.eu/rest/v2/name/" + name);
+    const data = await response.json();
+    setCountries(data);
+  }
+
   async function fetchCountriesData() {
     const response = await fetch("https://restcountries.eu/rest/v2/all");
     const data = await response.json();
@@ -17,7 +23,7 @@ function Countries() {
 
   return (
     <>
-      <TopPanel isSearch />
+      <TopPanel isSearch onSearch={handleSearch} />
 
       <main className="main-grid">
         { countries.map((country) =>

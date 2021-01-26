@@ -16,21 +16,21 @@ function CountryDetails({
         <p className="country-details__text">
           <span className="country-details__bold">Top Level Domain:</span>
            {
-            topLevelDomain.map((domain) => <span>{domain}</span>)
+            topLevelDomain.map((domain, index) => <span key={index}>{domain}</span>)
            }
         </p>
         <p className="country-details__text"><span className="country-details__bold">Population:</span> {population}</p>
         <p className="country-details__text">
           <span className="country-details__bold">Currencies:</span>
           {
-            currencies.map((currencie) => <span> {currencie.name} </span>)
+            currencies.map((currencie, index) => <span key={index}> {currencie.name} </span>)
           }
         </p>
         <p className="country-details__text"><span className="country-details__bold">Region:</span> {region}</p>
         <p className="country-details__text">
           <span className="country-details__bold">Languages:</span>
           {
-            languages.map((language) => <span> {language.name} </span>)
+            languages.map((language, index) => <span key={index}> {language.name} </span>)
           }
         </p>
         <p className="country-details__text"><span className="country-details__bold">Sub Region:</span> {subRegion}</p>
@@ -38,7 +38,7 @@ function CountryDetails({
         <p className="country-details__text country-details__borders">
           <span className="country-details__bold">Border Countries:</span>
           {
-            borderCountries.map((border) => <Border border={border} />)
+            borderCountries.map((border, index) => <Border  key={index} border={border} />)
           }
         </p>
       </div>

@@ -1,13 +1,13 @@
 import {Link} from "react-router-dom";
 import SearchZone from "./../molecules/SearchZone";
 
-function TopPanel({isSearch}) {
+function TopPanel({isSearch, onSearch}) {
   return(
     <div className="top-panel">
       {
         isSearch
         ?
-          <SearchZone />
+          <SearchZone onSearch={onSearch} />
         :
           <Link to="/" className="back-button">Back</Link>
       }
