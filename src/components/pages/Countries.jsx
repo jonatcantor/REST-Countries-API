@@ -38,16 +38,17 @@ function Countries() {
       <TopPanel isSearch onSearch={handleSearch} onSelect={handleSelect} />
 
       <main className="main-grid">
-        { countries.map((country) =>
-          <CountryCard
-            key={country.alpha3Code}
-            flag={country.flag}
-            name={country.name}
-            population={country.population}
-            region={country.region}
-            capital={country.capital}
-          />
-        )}
+        { countries.length > 0 &&
+            countries.map((country) =>
+            <CountryCard
+              key={country.alpha3Code}
+              flag={country.flag}
+              name={country.name}
+              population={country.population}
+              region={country.region}
+              capital={country.capital}
+            />
+            )}
       </main>
     </>
   );
