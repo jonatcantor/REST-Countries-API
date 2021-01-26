@@ -1,3 +1,5 @@
+import Border from "./../atoms/Border";
+
 function CountryDetails({
   flag, name, nativeName, topLevelDomain, population,
   currencies, region, languages, subRegion, capital, borderCountries
@@ -21,21 +23,22 @@ function CountryDetails({
         <p className="country-details__text">
           <span className="country-details__bold">Currencies:</span>
           {
-            currencies.map((currencie) => <span>{currencie.name}</span>)
+            currencies.map((currencie) => <span> {currencie.name} </span>)
           }
         </p>
         <p className="country-details__text"><span className="country-details__bold">Region:</span> {region}</p>
         <p className="country-details__text">
           <span className="country-details__bold">Languages:</span>
           {
-            languages.map((language) => <span>{language.name}</span>)
+            languages.map((language) => <span> {language.name} </span>)
           }
         </p>
         <p className="country-details__text"><span className="country-details__bold">Sub Region:</span> {subRegion}</p>
         <p className="country-details__text"><span className="country-details__bold">Capital:</span> {capital}</p>
-        <p className="country-details__text"><span className="country-details__bold">Border Countries:</span>
+        <p className="country-details__text country-details__borders">
+          <span className="country-details__bold">Border Countries:</span>
           {
-            borderCountries.map((border) => <span>{border}</span>)
+            borderCountries.map((border) => <Border border={border} />)
           }
         </p>
       </div>

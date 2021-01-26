@@ -25,6 +25,17 @@ html {
   gap: 2rem;
 }
 
+.country-main {
+  padding: 1rem 3rem;
+  min-height: 72vh;
+}
+
+.country-details {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
 .country-card {
   width: 100%;
   box-shadow: 0 0 1rem 0.1rem #b6b5b5;
@@ -71,6 +82,30 @@ html {
   line-height: 1.5rem;
 }
 
+.country-details__image {
+  width: 100%;
+}
+
+.country-details__name {
+  line-height: 5rem;
+}
+
+.country-details__text {
+  line-height: 3rem;
+}
+
+.country-details__bold {
+  font-weight: bold;
+}
+
+.country-details__borders {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -83,15 +118,47 @@ html {
   color: red;
 }
 
+.border {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 0.1rem #b6b5b5;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem 0rem 1rem;
+}
+
 @media (min-width: 640px) {
   .main-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .country-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .country-details__name {
+    line-height: normal;
+    margin-bottom: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .main-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .country-details__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .country-details__name {
+    grid-column: 1 / -1;
+  }
+
+  .country-details__text {
+    line-height: 1rem;
   }
 }
 
